@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*
+ * Plugin Name: Show Adsense
+ * Author: wwbewbe
+ * Plugin URI: https://github.com/wwbewbe/show-adsense
+ * Description: Show Ad Code from settings.
+ * Version: 0.9
+ * Author URI: http://wwbewbe.com/
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * @package Show Adsense
+ */
+
+/* Google Adsense Title(Sponsored Link) */
+.adsense-title {
+	font-size: 8px;
+}
+
+/* Google Adsense余計な改行を防ぐ */
+.adsense-code br {
+	display: none;
+}
+
+/* Google Adsense背景色を消す */
+.adsense-code ins {
+	background: none;
+}
