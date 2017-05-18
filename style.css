@@ -13,15 +13,15 @@
 
 /* Google Adsense Title(Sponsored Link) */
 .adsense-title {
-	font-size: 8px;
+  font-size: 8px;
 }
 
 /* Google Adsense余計な改行を防ぐ */
 .adsense-code br {
-	display: none;
+  display: none;
 }
 
 /* Google Adsense背景色を消す */
 .adsense-code ins {
-	background: none;
+  background: none;
 }
