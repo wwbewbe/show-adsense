@@ -395,16 +395,16 @@ class ShowAdsense
               'id' => '1', // Ad Code #
             ), $params, $this->shortcode_tag );
 
-    $title = '<div class="adsense-title">'.esc_html(__('Sponsored Links', 'show-adsense')).'</div>';
+//    $title = '<div class="adsense-title">'.esc_html(__('Sponsored Links', 'show-adsense')).'</div>';
     $adcode = get_option( sprintf( 'adcode_%s', $params['id'] ) );
     $adoption = sprintf( 'adoption_%s', $params['id'] );
     $flag = get_option( $adoption );
     if ( is_array( $flag ) ) {
       if ( ( !empty( $flag['show'] ) ) && !empty( $adcode ) ) {
-        return $title.'<div class="adsense-code">'.$adcode.'</div>';
+        return '<div class="adsense-code">'.$adcode.'</div>';
       }
     } elseif ( !empty( $flag ) && !empty( $adcode ) ) {
-      return $title.'<div class="adsense-code">'.$adcode.'</div>';
+      return '<div class="adsense-code">'.$adcode.'</div>';
     }
     return;
   }
@@ -414,17 +414,17 @@ class ShowAdsense
    */
   public function add_adcode( $content )
   {
-    $title = '<div class="adsense-title">'.esc_html(__('Sponsored Links', 'show-adsense')).'</div>';
+//    $title = '<div class="adsense-title">'.esc_html(__('Sponsored Links', 'show-adsense')).'</div>';
     $adcode_header = get_option( 'adcode_header' );
     $adoption_header = get_option( 'adoption_header' );
     $adcode_footer = get_option( 'adcode_footer' );
     $adoption_footer = get_option( 'adoption_footer' );
     if ( is_single() ) {
       if ( !empty( $adoption_header['post'] ) && !empty( $adcode_header ) ) {
-        $content = $title.'<div class="adsense-code">'.$adcode_header.'</div>'.$content;
+        $content = '<div class="adsense-code">'.$adcode_header.'</div>'.$content;
       }
       if ( !empty( $adoption_footer['post'] ) && !empty( $adcode_footer ) ) {
-        $content .= $title.'<div class="adsense-code">'.$adcode_footer.'</div>';
+        $content .= '<div class="adsense-code">'.$adcode_footer.'</div>';
       }
     }
     return $content;
