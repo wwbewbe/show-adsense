@@ -16,6 +16,11 @@
   font-size: 8px;
 }
 
+/* Adsenseの下に余白を設定 */
+.adsense-code {
+  margin-bottom: 10px;
+}
+
 /* Google Adsense余計な改行を防ぐ */
 .adsense-code br {
   display: none;
